@@ -1,7 +1,6 @@
 package decorator;
 
-public interface Ingrediente {
-
-    String imprimeIngrediente();
-    double valorDoIngrediente();
+public abstract class Ingrediente {
+    public abstract String imprimeIngrediente();
+    public abstract double valorDoIngrediente();
 }

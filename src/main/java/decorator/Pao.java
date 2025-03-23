@@ -1,34 +1,35 @@
 package decorator;
 
-public class Pao extends IngredienteDecorator {
-
-
-    public Pao(Ingrediente ingrediente) {
-        super(ingrediente);
-    }
-
-    public Pao() {
-        super(null);
-    }
-
-    @Override
+public class Pao {
+    private String ingredientes = "Pão";
+    private double preco = 2.00; // Preço base do Pão
+    
     public String imprimeIngrediente() {
-        String ingredientes = "Pão";
-
-        if (super.ingrediente != null)
-            ingredientes += ", " + super.ingrediente.imprimeIngrediente();
-
         return ingredientes;
     }
 
-    @Override
     public double valorDoIngrediente() {
+        return preco;
+    }
 
-        double valor = 1.5;
+    // Métodos para adicionar ingredientes ao Pão
+    public void adicionarKetchup() {
+        ingredientes += ", Ketchup";
+        preco += 1.00;
+    }
 
-        if (super.ingrediente != null)
-            valor += ingrediente.valorDoIngrediente();
+    public void adicionarBacon() {
+        ingredientes += ", Bacon";
+        preco += 1.50;
+    }
 
-        return valor;
+    public void adicionarQueijo() {
+        ingredientes += ", Queijo";
+        preco += 0.75;
+    }
+
+    public void adicionarSalada() {
+        ingredientes += ", Salada";
+        preco += 0.25;
     }
 }

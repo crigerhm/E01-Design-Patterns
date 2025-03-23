@@ -1,13 +1,16 @@
 package decorator;
 
 public class Main {
-
     public static void main(String[] args) {
+        Ingrediente pedido = new Ketchup(); // Começamos com Ketchup
+        pedido = new BaconDecorator(pedido); // Adicionamos Bacon
+        pedido = new QueijoDecorator(pedido); // Adicionamos Queijo
+        pedido = new SaladaDecorator(pedido); // Adicionamos Salada
 
-        Ingrediente produto = new Pao(new Pao());
+        // Imprimir todos os ingredientes
+        System.out.println("Ingredientes: " + pedido.imprimeIngrediente());
 
-        System.out.println(produto.imprimeIngrediente());
-        System.out.println(produto.valorDoIngrediente());
-
+        // Imprimir o valor total
+        System.out.println("Valor total: R$ " + pedido.valorDoIngrediente());
     }
 }
