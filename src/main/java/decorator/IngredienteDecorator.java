@@ -1,7 +1,6 @@
 package decorator;
 
 public abstract class IngredienteDecorator implements Ingrediente {
-
     protected Ingrediente ingrediente;
 
     public IngredienteDecorator(Ingrediente ingrediente) {
@@ -9,12 +8,12 @@ public abstract class IngredienteDecorator implements Ingrediente {
     }
 
     @Override
-    public String imprimeIngrediente() {
-        return this.ingrediente.imprimeIngrediente();
+    public void imprimeIngrediente() {
+        ingrediente.imprimeIngrediente();  
     }
 
     @Override
     public double valorDoIngrediente() {
-        return this.ingrediente.valorDoIngrediente();
+        return ingrediente.valorDoIngrediente();  
     }
 }

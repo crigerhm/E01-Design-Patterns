@@ -1,7 +1,9 @@
 package decorator;
 
 public interface Ingrediente {
+   
+    void imprimeIngrediente();
 
-    String imprimeIngrediente();
+    
     double valorDoIngrediente();
 }
