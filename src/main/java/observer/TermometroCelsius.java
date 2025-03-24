@@ -1,10 +1,11 @@
 package observer;
 
 public class TermometroCelsius implements Observer {
-
     @Override
-    public void update(Subject s) {
-        double temperatura = ((Temperatura) s).getTemperatura();
-        System.out.println("Temperatura em Celsius: " + temperatura);
+    public void update(Subject subject) {
+        if (subject instanceof ConcreteSubject) {
+            String temp = ((ConcreteSubject) subject).getTemperature();
+            System.out.println("Temperatura em Celsius: " + temp);
+        }
     }
 }
