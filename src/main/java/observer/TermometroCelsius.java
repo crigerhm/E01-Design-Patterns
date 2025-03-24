@@ -1,6 +1,7 @@
 package observer;
 
-public class TermometroCelsius  implements Observer {
+public class TermometroCelsius implements Observer {
+
     @Override
     public void update(Subject s) {
         double temperatura = ((Temperatura) s).getTemperatura();

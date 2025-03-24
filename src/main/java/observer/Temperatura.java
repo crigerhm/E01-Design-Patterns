@@ -10,6 +10,6 @@ public class Temperatura extends Subject {
 
     public void setTemperatura(double temperatura) {
         this.temperatura = temperatura;
-        super.notifyObservers();
+        super.notifyObservers(); 
     }
 }
